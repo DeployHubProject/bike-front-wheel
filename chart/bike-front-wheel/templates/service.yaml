@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ include "bike-front-wheel.name" . }}
+spec:
+  selector:
+    app: {{ include "bike-front-wheel.name" . }}
+  ports:
+    - name: http
+      port: 80
